@@ -142,6 +142,12 @@ end
     @@contacts.delete.self
   end
 
+  def save
+    @id = @@next_id
+    @@next_id += 1
+    @@contacts << self # Self is the object you are currently working with
+  end
+
   # Feel free to add other methods here, if you need them.
 
 end
